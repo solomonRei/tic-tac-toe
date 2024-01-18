@@ -1,27 +1,39 @@
-package tictactoe.interfaces.Impl.commands;
+package tictactoe.interfaces.impl.commands;
 
+import java.util.HashMap;
+import java.util.Map;
 import tictactoe.enums.Difficulty;
 import tictactoe.enums.PlayerType;
 import tictactoe.interfaces.Command;
-import tictactoe.interfaces.Impl.GameBoard;
+import tictactoe.interfaces.impl.GameBoardImpl;
 import tictactoe.utils.Game;
 
-import java.util.HashMap;
-
+/** StartCommand class, used for starting the game. */
 public class StartCommand implements Command {
 
-    private final HashMap<PlayerType, Difficulty> player1Type;
+  /** Player 1 type and difficulty setting. */
+  private final Map<PlayerType, Difficulty> player1Type;
 
-    private final HashMap<PlayerType, Difficulty> player2Type;
+  /** Player 2 type and difficulty setting. */
+  private final Map<PlayerType, Difficulty> player2Type;
 
-    public StartCommand(HashMap<PlayerType, Difficulty> player1Type, HashMap<PlayerType, Difficulty> player2Type) {
-        this.player1Type = player1Type;
-        this.player2Type = player2Type;
-    }
+  /**
+   * Constructor to create a start command with specified player types and difficulties.
+   *
+   * @param p1Type the type and difficulty setting for player 1
+   * @param p2Type the type and difficulty setting for player 2
+   */
+  public StartCommand(
+          final Map<PlayerType, Difficulty> p1Type,
+          final Map<PlayerType, Difficulty> p2Type) {
+    this.player1Type = new HashMap<>(p1Type); // Make a defensive copy
+    this.player2Type = new HashMap<>(p2Type); // Make a defensive copy
+  }
 
-    @Override
-    public void execute() {
-        var game = new Game(new GameBoard(), player1Type, player2Type);
-        game.start();
-    }
+  /** Execute and start the game. */
+  @Override
+  public void execute() {
+    var game = new Game(new GameBoardImpl(), player1Type, player2Type);
+    game.start();
+  }
 }

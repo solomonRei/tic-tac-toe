@@ -1,23 +1,36 @@
-package tictactoe.interfaces.Impl.strategies;
+package tictactoe.interfaces.impl.strategies;
 
+import java.util.Random;
 import tictactoe.enums.CoordinateValidation;
 import tictactoe.interfaces.GameBoard;
 import tictactoe.interfaces.MoveStrategy;
 
-import java.util.Random;
-
+/** Easy difficulty move strategy. */
 public class EasyMoveStrategy implements MoveStrategy {
 
-    @Override
-    public int[] determineMove(GameBoard board) {
-        var random = new Random();
-        while (true) {
-            int x = random.nextInt(3) + 1;
-            int y = random.nextInt(3) + 1;
-            CoordinateValidation move = new CoordinateValidation(x, y);
-            if (board.isCellEmpty(move)) {
-                return new int[]{x, y};
-            }
-        }
+  /** Maximum coordinate. */
+  private static final int MAX_COORDINATE = 3;
+
+  /** Offset. */
+  private static final int OFFSET = 1;
+
+  /** Random number generator. */
+  private static final Random RANDOM = new Random();
+
+  /**
+   * Determine move for easy difficulty.
+   *
+   * @param board game board
+   * @return coordinates of move
+   */
+  @Override
+  public int[] determineMove(final GameBoard board) {
+    while (true) {
+      int x = RANDOM.nextInt(MAX_COORDINATE) + OFFSET;
+      int y = RANDOM.nextInt(MAX_COORDINATE) + OFFSET;
+      if (board.isCellEmpty(new CoordinateValidation(x, y))) {
+        return new int[] {x, y};
+      }
     }
+  }
 }

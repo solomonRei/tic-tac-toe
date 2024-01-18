@@ -1,6 +1,8 @@
 package tictactoe.interfaces;
 
+/** Command interface, used for command pattern. */
 public interface Command {
 
-    void execute();
+  /** Execute method. */
+  void execute();
 }
