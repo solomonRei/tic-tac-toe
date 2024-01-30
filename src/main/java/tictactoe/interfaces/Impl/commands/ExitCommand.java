@@ -1,11 +1,14 @@
-package tictactoe.interfaces.Impl.commands;
+package tictactoe.interfaces.impl.commands;
 
+import tictactoe.Main;
 import tictactoe.interfaces.Command;
 
+/** Exit command. */
 public class ExitCommand implements Command {
 
-    @Override
-    public void execute() {
-        System.exit(0);
-    }
+  /** Exit command execution. */
+  @Override
+  public void execute() {
+    Main.requestExit();
+  }
 }

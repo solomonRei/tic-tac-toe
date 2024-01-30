@@ -1,51 +1,79 @@
-package tictactoe.interfaces.Impl.strategies;
+package tictactoe.interfaces.impl.strategies;
 
+import java.util.Random;
 import tictactoe.enums.CoordinateValidation;
 import tictactoe.interfaces.GameBoard;
 import tictactoe.interfaces.MoveStrategy;
 import tictactoe.utils.Config;
 
-import java.util.Random;
-
+/** Medium difficulty move strategy. */
 public class MediumMoveStrategy implements MoveStrategy {
+  /** Maximum coordinate. */
+  private static final int MAX_COORDINATE = 3;
 
-    @Override
-    public int[] determineMove(GameBoard board) {
-        int[] winningMove = findWinningMove(board, 'O');
-        if (winningMove != null) return winningMove;
+  /** Offset. */
+  private static final int OFFSET = 1;
 
-        int[] blockingMove = findWinningMove(board, 'X');
-        if (blockingMove != null) return blockingMove;
+  /** Random number generator. */
+  private static final Random RANDOM = new Random();
 
-        return getRandomMove(board);
+  /**
+   * Determine move for medium difficulty.
+   *
+   * @param board game board
+   * @return coordinates of move
+   */
+  @Override
+  public int[] determineMove(final GameBoard board) {
+    int[] winningMove = findWinningMove(board, 'O');
+    if (winningMove != null) {
+      return winningMove;
     }
 
-    private int[] findWinningMove(GameBoard board, char playerSymbol) {
-        for (int i = 1; i <= 3; i++) {
-            for (int j = 1; j <= 3; j++) {
-                if (board.isCellEmpty(new CoordinateValidation(i, j))) {
-                    board.setCell(i - 1, j - 1, playerSymbol);
-                    if (board.checkWin(playerSymbol)) {
-                        board.setCell(i - 1, j - 1, Config.EMPTY_CELL);
-                        return new int[]{i, j};
-                    }
-                    board.setCell(i - 1, j - 1, Config.EMPTY_CELL);
-                }
-            }
+    int[] blockingMove = findWinningMove(board, 'X');
+    if (blockingMove != null) {
+      return blockingMove;
+    }
+
+    return getRandomMove(board);
+  }
+
+  /**
+   * Find winning move.
+   *
+   * @param board game board
+   * @param playerSymbol player symbol
+   * @return coordinates of winning move
+   */
+  private int[] findWinningMove(final GameBoard board, final char playerSymbol) {
+    for (int i = 1; i <= Config.ROW_SIZE; i++) {
+      for (int j = 1; j <= Config.COL_SIZE; j++) {
+        if (board.isCellEmpty(new CoordinateValidation(i, j))) {
+          board.setCell(i - 1, j - 1, playerSymbol);
+          if (board.checkWin(playerSymbol)) {
+            board.setCell(i - 1, j - 1, Config.EMPTY_CELL);
+            return new int[] {i, j};
+          }
+          board.setCell(i - 1, j - 1, Config.EMPTY_CELL);
         }
-        return null;
+      }
     }
+    return null;
+  }
 
-    private int[] getRandomMove(GameBoard board) {
-        var random = new Random();
-        while (true) {
-            int x = random.nextInt(3) + 1;
-            int y = random.nextInt(3) + 1;
-            if (board.isCellEmpty(new CoordinateValidation(x, y))) {
-                return new int[]{x, y};
-            }
-        }
+  /**
+   * Get random move.
+   *
+   * @param board game board
+   * @return coordinates of random move
+   */
+  private int[] getRandomMove(final GameBoard board) {
+    while (true) {
+      int x = RANDOM.nextInt(MAX_COORDINATE) + OFFSET;
+      int y = RANDOM.nextInt(MAX_COORDINATE) + OFFSET;
+      if (board.isCellEmpty(new CoordinateValidation(x, y))) {
+        return new int[] {x, y};
+      }
     }
-
+  }
 }
-

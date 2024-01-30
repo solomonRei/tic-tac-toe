@@ -1,11 +1,14 @@
 package tictactoe.utils;
 
+/** Config class, used for storing constants. */
 public class Config {
 
-    public final static char EMPTY_CELL = '_';
+  /** Empty cell. */
+  public static final char EMPTY_CELL = '_';
 
-    public final static int ROW_SIZE = 3;
+  /** Row size. */
+  public static final int ROW_SIZE = 3;
 
-    public final static int COL_SIZE = 3;
-
+  /** Column size. */
+  public static final int COL_SIZE = 3;
 }
