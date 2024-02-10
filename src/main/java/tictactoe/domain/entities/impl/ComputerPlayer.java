@@ -1,12 +1,12 @@
-package tictactoe.interfaces.impl.entities;
+package tictactoe.domain.entities.impl;
 
-import tictactoe.enums.CoordinateValidation;
+import tictactoe.domain.enums.CoordinateValidation;
 import tictactoe.interfaces.GameBoard;
-import tictactoe.interfaces.MoveStrategy;
-import tictactoe.interfaces.Player;
-import tictactoe.interfaces.impl.strategies.EasyMoveStrategy;
-import tictactoe.interfaces.impl.strategies.HardMoveStrategy;
-import tictactoe.interfaces.impl.strategies.MediumMoveStrategy;
+import tictactoe.domain.strategies.MoveStrategy;
+import tictactoe.domain.entities.Player;
+import tictactoe.domain.strategies.impl.EasyMoveStrategy;
+import tictactoe.domain.strategies.impl.HardMoveStrategy;
+import tictactoe.domain.strategies.impl.MediumMoveStrategy;
 import tictactoe.utils.ConsoleHandler;
 
 /** ComputerPlayer class. */

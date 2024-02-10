@@ -1,10 +1,10 @@
-package tictactoe.interfaces.impl.commands;
+package tictactoe.domain.commands.impl;
 
 import java.util.HashMap;
 import java.util.Map;
-import tictactoe.enums.Difficulty;
-import tictactoe.enums.PlayerType;
-import tictactoe.interfaces.Command;
+import tictactoe.domain.enums.Difficulty;
+import tictactoe.domain.enums.PlayerType;
+import tictactoe.domain.commands.Command;
 import tictactoe.interfaces.impl.GameBoardImpl;
 import tictactoe.utils.Game;
 

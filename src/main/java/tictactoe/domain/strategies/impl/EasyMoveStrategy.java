@@ -1,9 +1,9 @@
-package tictactoe.interfaces.impl.strategies;
+package tictactoe.domain.strategies.impl;
 
 import java.util.Random;
-import tictactoe.enums.CoordinateValidation;
+import tictactoe.domain.enums.CoordinateValidation;
 import tictactoe.interfaces.GameBoard;
-import tictactoe.interfaces.MoveStrategy;
+import tictactoe.domain.strategies.MoveStrategy;
 
 /** Easy difficulty move strategy. */
 public class EasyMoveStrategy implements MoveStrategy {

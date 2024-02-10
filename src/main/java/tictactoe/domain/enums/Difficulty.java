@@ -1,4 +1,4 @@
-package tictactoe.enums;
+package tictactoe.domain.enums;
 
 /** Enum representing the difficulty levels of the Tic-Tac-Toe game. */
 public enum Difficulty {

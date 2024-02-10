@@ -1,4 +1,4 @@
-package tictactoe.enums;
+package tictactoe.domain.enums;
 
 import tictactoe.utils.ConsoleHandler;
 

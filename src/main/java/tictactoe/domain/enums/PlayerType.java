@@ -1,4 +1,4 @@
-package tictactoe.enums;
+package tictactoe.domain.enums;
 
 /** Enumerates the types of players in the game. */
 public enum PlayerType {

@@ -1,13 +1,13 @@
 package tictactoe.utils;
 
 import java.util.Map;
-import tictactoe.enums.Difficulty;
-import tictactoe.enums.GameState;
-import tictactoe.enums.PlayerType;
+import tictactoe.domain.enums.Difficulty;
+import tictactoe.domain.enums.GameState;
+import tictactoe.domain.enums.PlayerType;
 import tictactoe.interfaces.GameBoard;
-import tictactoe.interfaces.Player;
+import tictactoe.domain.entities.Player;
 import tictactoe.interfaces.impl.GameBoardImpl;
-import tictactoe.interfaces.impl.entities.HumanPlayer;
+import tictactoe.domain.entities.impl.HumanPlayer;
 
 /** This class handles the game logic. */
 public class Game {

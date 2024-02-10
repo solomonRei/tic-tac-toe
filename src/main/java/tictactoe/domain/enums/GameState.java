@@ -1,4 +1,4 @@
-package tictactoe.enums;
+package tictactoe.domain.enums;
 
 /** Represents the possible states of a game of Tic-Tac-Toe. */
 public enum GameState {

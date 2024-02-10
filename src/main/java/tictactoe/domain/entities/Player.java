@@ -1,4 +1,6 @@
-package tictactoe.interfaces;
+package tictactoe.domain.entities;
+
+import tictactoe.interfaces.GameBoard;
 
 /** MoveStrategy interface, used for move strategy. */
 public interface Player {

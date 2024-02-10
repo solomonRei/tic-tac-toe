@@ -1,9 +1,9 @@
-package tictactoe.interfaces.impl.strategies;
+package tictactoe.domain.strategies.impl;
 
-import tictactoe.enums.CoordinateValidation;
-import tictactoe.enums.GameState;
+import tictactoe.domain.enums.CoordinateValidation;
+import tictactoe.domain.enums.GameState;
 import tictactoe.interfaces.GameBoard;
-import tictactoe.interfaces.MoveStrategy;
+import tictactoe.domain.strategies.MoveStrategy;
 import tictactoe.utils.Config;
 
 /** Hard difficulty move strategy. */
