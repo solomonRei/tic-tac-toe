@@ -4,13 +4,13 @@ import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Optional;
 import java.util.Scanner;
-import tictactoe.enums.CoordinateValidation;
-import tictactoe.enums.Difficulty;
-import tictactoe.enums.PlayerType;
-import tictactoe.interfaces.Command;
+import tictactoe.domain.enums.CoordinateValidation;
+import tictactoe.domain.enums.Difficulty;
+import tictactoe.domain.enums.PlayerType;
+import tictactoe.domain.commands.Command;
 import tictactoe.interfaces.GameBoard;
-import tictactoe.interfaces.impl.commands.ExitCommand;
-import tictactoe.interfaces.impl.commands.StartCommand;
+import tictactoe.domain.commands.impl.ExitCommand;
+import tictactoe.domain.commands.impl.StartCommand;
 
 /** This class handles all the input and output to the console. */
 public final class ConsoleHandler {

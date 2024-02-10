@@ -1,7 +1,7 @@
 package tictactoe.interfaces;
 
-import tictactoe.enums.CoordinateValidation;
-import tictactoe.enums.GameState;
+import tictactoe.domain.enums.CoordinateValidation;
+import tictactoe.domain.enums.GameState;
 
 /** GameBoard interface, used for game board. */
 public interface GameBoard {

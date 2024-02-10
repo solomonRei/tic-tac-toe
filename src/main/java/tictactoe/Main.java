@@ -1,6 +1,6 @@
 package tictactoe;
 
-import tictactoe.interfaces.Command;
+import tictactoe.domain.commands.Command;
 import tictactoe.utils.ConsoleHandler;
 
 /** Main class. */

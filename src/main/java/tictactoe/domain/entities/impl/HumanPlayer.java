@@ -1,8 +1,8 @@
-package tictactoe.interfaces.impl.entities;
+package tictactoe.domain.entities.impl;
 
-import tictactoe.enums.CoordinateValidation;
+import tictactoe.domain.enums.CoordinateValidation;
 import tictactoe.interfaces.GameBoard;
-import tictactoe.interfaces.Player;
+import tictactoe.domain.entities.Player;
 import tictactoe.utils.ConsoleHandler;
 
 /** Human player. */

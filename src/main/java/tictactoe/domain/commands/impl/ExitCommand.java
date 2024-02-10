@@ -1,7 +1,7 @@
-package tictactoe.interfaces.impl.commands;
+package tictactoe.domain.commands.impl;
 
 import tictactoe.Main;
-import tictactoe.interfaces.Command;
+import tictactoe.domain.commands.Command;
 
 /** Exit command. */
 public class ExitCommand implements Command {

@@ -1,15 +1,15 @@
 package tictactoe.utils;
 
 import java.util.Map;
-import tictactoe.enums.Difficulty;
-import tictactoe.enums.PlayerType;
-import tictactoe.interfaces.MoveStrategy;
-import tictactoe.interfaces.Player;
-import tictactoe.interfaces.impl.entities.ComputerPlayer;
-import tictactoe.interfaces.impl.entities.HumanPlayer;
-import tictactoe.interfaces.impl.strategies.EasyMoveStrategy;
-import tictactoe.interfaces.impl.strategies.HardMoveStrategy;
-import tictactoe.interfaces.impl.strategies.MediumMoveStrategy;
+import tictactoe.domain.enums.Difficulty;
+import tictactoe.domain.enums.PlayerType;
+import tictactoe.domain.strategies.MoveStrategy;
+import tictactoe.domain.entities.Player;
+import tictactoe.domain.entities.impl.ComputerPlayer;
+import tictactoe.domain.entities.impl.HumanPlayer;
+import tictactoe.domain.strategies.impl.EasyMoveStrategy;
+import tictactoe.domain.strategies.impl.HardMoveStrategy;
+import tictactoe.domain.strategies.impl.MediumMoveStrategy;
 
 /** Player factory. */
 public final class PlayerFactory {

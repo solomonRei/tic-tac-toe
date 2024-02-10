@@ -1,7 +1,7 @@
 package tictactoe.interfaces.impl;
 
-import tictactoe.enums.CoordinateValidation;
-import tictactoe.enums.GameState;
+import tictactoe.domain.enums.CoordinateValidation;
+import tictactoe.domain.enums.GameState;
 import tictactoe.interfaces.GameBoard;
 import tictactoe.utils.Config;
 
